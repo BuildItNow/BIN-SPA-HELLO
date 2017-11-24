@@ -30,6 +30,7 @@
   },
   "scripts": {
     "start": "node ./server/dev.js",
-    "build": "gulp build"
+    "build": "gulp build",
+    "build-start": "node ./server/pro.js"
   }
 }
