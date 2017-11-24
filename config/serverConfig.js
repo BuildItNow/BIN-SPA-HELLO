@@ -1,10 +1,10 @@
 var config =
 {
     server: "./client",
-    port: "3000",
-    notify: "false",
-    files: "**/*.css ,**/*.html ,**/*.js",
-    logFileChanges: "false",
+    port: 3000,
+    notify: false,
+    files: "./client/**",
+    logFileChanges: false,
     reloadDebounce: 1000
 }
 

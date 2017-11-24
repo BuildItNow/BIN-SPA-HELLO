@@ -2,6 +2,7 @@
   "name": "BIN-SPA-HELLO",
   "description": "BIN single page application template",
   "version": "1.0.0",
+  "license": "MIT",
   "author": {
     "name": "Yang G",
     "email": "pinner@mail.ustc.edu.cn"
@@ -24,7 +25,8 @@
     "gulp-notify": "^2.2.0",
     "gulp-uglify": "*",
     "md5": "*",
-    "through2": "~0.6.1"
+    "through2": "~0.6.1",
+    "browser-sync": "^2.18.8"
   },
   "scripts": {
     "start": "node ./server/dev.js",
