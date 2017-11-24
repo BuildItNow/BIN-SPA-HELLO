@@ -2,10 +2,10 @@
 A template project for bin framework. This project describes how to develop a mobile SPA with **BIN**, and how to use some base components. Use `$ bitnow-init name` to generate your own project with this template.
 
 ## Description
-This project is a simple mobile SPA demo developed with **BIN** framework. The structure is simple.<br/>
-Each app has a single `Application` instance defined in *client/applicatoin*, app can customize the `init` and `run` work in it.<br/>
-Each view consists of two files: *html* describes the UI structure and appearence, *js* describes the logic of business. So no new concepts, just do as before. And if you have developed the traditional GUI application like Qt, IOS or Android, you will find it's very similar.<br/>
-Always follow **KISS** principle. Easy but Powerful.
+This project is a simple mobile SPA demo developed with **BIN** framework. The structure is simple.
+Each app has a single `Application` instance defined in *client/applicatoin*, app can customize the `init` and `run` work in it.
+Each view consists of two files: *html* describes the UI structure and appearence, *js* describes the logic of business. So no new concepts, just do as before. And if you have developed the traditional GUI application like Qt, IOS or Android, you will find it's very similar.
+Alwayse follow KISS principle. Easy but Powerful.
 
 ### Contents information
 * *client* : application source code
