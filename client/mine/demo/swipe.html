@@ -1,0 +1,37 @@
+<div id="swipe" class="bin-page" vm>
+	<style>
+		#swipe .swiper-container
+		{
+			height: 10rem;
+			line-height: 10rem;
+
+			background-color: #f9f9f9;
+		}
+
+		#swipe .swiper-slide
+		{
+			line-height: inherit;
+			font-size: 0.8rem;
+			text-align: center;
+
+			color: #36aeff;
+		}
+	</style>
+	<div class="bin-page-navi-bar" naviTitle="text:Swipe TODO"></div>
+	<div class="bin-page-content">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					Slide 0
+				</div>
+				<div class="swiper-slide">
+					Slide 1
+				</div>
+				<div class="swiper-slide">
+					Slide 2
+				</div>
+			</div>
+		</div>
+		<view path="bin/common/swipeView" opts.el="view.$('.swiper-container')" opts.on-change="view.onChange.bind(view)"></view>
+	</div>
+</div>

@@ -1,0 +1,124 @@
+<div id="mineIndex">
+	<style>
+
+    #mineIndex
+    {
+        background-color: #efeff4;
+        min-height: 100%;
+    }
+
+    #mineIndex section
+    {
+        background-color: white;
+    }
+
+    #mineIndex .face
+    {
+        display: inline-flex;
+        -webkit-display: inline-flex;
+
+        align-items: center;
+    }
+
+    #mineIndex .avatar
+    {
+        flex-shrink: 0;
+        background-image: url("mine/img/bin.png");
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 0;
+    }
+
+    #mineIndex .name
+    {
+        margin: 0;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #000000;
+    }
+
+    #mineIndex .desc
+    {
+        display: block;
+        font-size: 0.6rem;
+        color: #3d4145;
+    }
+
+    #mineIndex .right-arrow
+    {
+        height: 100%;
+        margin: 0;
+    }
+	</style>
+	<section style="text-align:center;padding:1em 0;">
+        <div class="face">
+            <div class="icon avatar">
+            </div>
+            <div class="name">{{user.name}}</div>  
+        </div>
+        <span class="desc">{{{user.desc}}}</span>
+	</section>
+    <section style="margin-top:10px;">
+        <ul class="menu-box">
+            <li class="menu" v-navigation:push="mine/editPassword">
+                修改密码
+                <div class="icon right-arrow"></div>
+            </li>
+            <li class="menu" v-navigation:push="mine/aboutCLI">
+                关于CLI
+                <div class="icon right-arrow"></div>
+            </li>
+        </ul>
+    </section>
+    <section style="margin:10px 0">
+        <ul class="menu-box">
+            <li class="menu" @click="showStatus">
+                Status
+                <div class="icon right-arrow"></div>
+            </li>
+            <li class="menu" @click="showIndicator">
+                Indicator
+                <div class="icon right-arrow"></div>
+            </li>
+            <li class="menu" @click="showAlert">
+                Alert
+                <div class="icon right-arrow"></div>
+            </li>
+            <li class="menu" @click="select">
+                Select
+                <div class="icon right-arrow"></div>
+            </li>
+            <li class="menu" @click="datePick">
+                Date Picker
+                <div class="icon right-arrow"></div>
+            </li>
+            <li class="menu" v-navigation:push="mine/demo/tabbar">
+                Tab Bar
+                <div class="icon right-arrow"></div>
+            </li>
+            <li class="menu" v-navigation:push="mine/demo/swipe">
+                Swipe
+                <div class="icon right-arrow"></div>
+            </li>
+            <li class="menu" v-navigation:push="mine/demo/tabswipe">
+                Tab and Swipe
+                <div class="icon right-arrow"></div>
+            </li>
+            <li class="menu" v-navigation:push="mine/demo/scroll">
+                Scroll
+                <div class="icon right-arrow"></div>
+            </li>
+            <li class="menu" v-navigation:push="mine/demo/refresh">
+                Pull to Refresh
+                <div class="icon right-arrow"></div>
+            </li>
+            <li class="menu" v-navigation:push="mine/demo/list">
+                Infinite List
+                <div class="icon right-arrow"></div>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+    </section>
+</div>

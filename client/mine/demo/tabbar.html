@@ -1,0 +1,37 @@
+<div id="tabbar" class="bin-page" vm>
+	<style>
+		#tabbar .tab-bar
+		{
+			height: 2.2rem;
+			line-height: 2.2rem;
+			background-color: #f9f9f9;
+
+			font-size: 0px;
+		}
+
+		#tabbar .tab
+		{
+			display: inline-block;
+			width: 50%;
+			height: 100%;
+			line-height: inherit;
+
+			font-size: 12px;
+			color: #c6c6c6;
+			text-align: center;
+		}
+
+		#tabbar .active
+		{
+			color: #36aeff;
+		}
+	</style>
+	<div class="bin-page-navi-bar" naviTitle="text:TabBar TODO"></div>
+	<div class="bin-page-content">
+		<div class="tab-bar">
+			<div class="tab" id="tab0">Tab 0</div>
+			<div class="tab" id="tab1">Tab 1</div>
+		</div>
+		<view path="bin/common/tabBarView" opts.el="view.$('.tab-bar')" opts.items="code:['tab0', 'tab1']" opts.active-style="active" opts.on-change="view.onChange.bind(view)"></view>
+	</div>
+</div>

@@ -1,0 +1,64 @@
+.bin-page
+{
+    font-weight: lighter;
+}
+
+.bin-page-content
+{
+    background-color: white;
+}
+
+.bin-page-navi-bar
+{
+    border-bottom: 1px solid #e6e6e6;
+    box-sizing: border-box;
+}
+
+.icon
+{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.menu-box
+{
+    padding: 0 0.5em;
+    margin: 0;
+
+    background-color: white;
+}
+
+.menu
+{
+    display: block;
+    font-size: 0.8rem;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    color: #3d4145;
+    border-bottom: 1px solid #eee;
+
+    position: relative;
+}
+
+.menu:last-child
+{
+    border-bottom: 0px;
+}
+
+#mineIndex .right-arrow
+{
+    position: absolute;
+    top: 0;
+    right: 0em;
+
+    width: 1rem;
+    height: 100%;
+
+    background-size: 1rem 1rem;
+    background-position: 0 50%;
+    background-image: url(../img/right.png);
+
+    opacity: 0.5;
+    margin: 0;
+}
+

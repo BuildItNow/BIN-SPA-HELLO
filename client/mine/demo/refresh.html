@@ -1,0 +1,23 @@
+<div id="refresh" class="bin-page" vm>
+	<style>
+		#refresh section
+		{
+			height: 15rem;
+			background-color: #f9f9f9;
+
+			font-size: 0.8rem;
+			color: #36aeff;
+			line-height: 15rem;
+			text-align: center;
+
+			border-bottom: 1px solid #e6e6e6;
+		}
+	</style>
+	<div class="bin-page-navi-bar" naviTitle="text:Refresh TODO"></div>
+	<div class="bin-page-content">
+		<div>
+			<section v-for="item in items">Section {{item}}</section>
+		</div>
+	</div>
+	<view path="bin/common/refreshView" opts.el="view.$content()" opts.auto-refresh="animation" opts.on-refresh="view.onRefresh.bind(view)"></view>
+</div>

@@ -1,0 +1,71 @@
+<div id="tabswipe" class="bin-page" vm>
+	<style>
+		#tabswipe .tab-bar
+		{
+			height: 2.2rem;
+			line-height: 2.2rem;
+			background-color: #f9f9f9;
+
+			font-size: 0px;
+		}
+
+		#tabswipe .tab
+		{
+			display: inline-block;
+			width: 33.33%;
+			height: 100%;
+			line-height: inherit;
+
+			font-size: 12px;
+			color: #c6c6c6;
+			text-align: center;
+		}
+
+		#tabswipe .active
+		{
+			color: #36aeff;
+		}
+
+		#tabswipe .swiper-container
+		{
+			margin-top: 10px;
+			height: 10rem;
+			line-height: 10rem;
+
+			background-color: #f9f9f9;
+		}
+
+		#tabswipe .swiper-slide
+		{
+			line-height: inherit;
+			font-size: 0.8rem;
+			text-align: center;
+
+			color: #36aeff;
+		}
+	</style>
+	<div class="bin-page-navi-bar" naviTitle="text:Tab TODO"></div>
+	<div class="bin-page-content">
+		<div id="tab">
+			<div id="tabBar" class="tab-bar">
+				<div class="tab" id="tab0">Tab 0</div>
+				<div class="tab" id="tab1">Tab 1</div>
+				<div class="tab" id="tab2">Tab 2</div>
+			</div>
+			<div id="swipe" class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						Slide 0
+					</div>
+					<div class="swiper-slide">
+						Slide 1
+					</div>
+					<div class="swiper-slide">
+						Slide 2
+					</div>
+				</div>
+			</div>
+		</div>
+		<view path="bin/common/tabView" opts.el="view.$('#tab')" opts.tab-bar-i-d="tabBar" opts.swipe-i-d="swipe" opts.items="code:['tab0', 'tab1', 'tab2']" opts.active-style="active" opts.on-change="view.onChange.bind(view)"></view>
+	</div>
+</div>

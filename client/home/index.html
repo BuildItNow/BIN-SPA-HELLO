@@ -1,0 +1,94 @@
+<div id="homeIndex" class="bin-page" vm>
+	<style>
+    #homeIndex .home-content
+    {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 2.5rem;
+
+        overflow-y: scroll;
+    }
+
+    #homeIndex .home-footer
+    {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2.5rem;
+        font-size: 0;
+        border-top: 1px solid #e6e6e6;
+        background-color: #f9f9f9
+    }
+
+    #homeIndex .tab
+    {
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+        text-align: center;
+    }
+
+    #homeIndex .icon
+    {
+        margin: 0.3rem auto 0;
+        width: 1.1rem;
+        height: 1.1rem;
+    }
+
+    #homeIndex .work
+    {
+        background-image: url(home/img/work.png);
+    }
+
+    #homeIndex .mine
+    {
+        background-image: url(home/img/me.png);
+    }
+
+    #homeIndex .active .work
+    {
+        background-image: url(home/img/work-hover.png);
+    }
+
+    #homeIndex .active .mine
+    {
+        background-image: url(home/img/me-hover.png);
+    }
+
+    #homeIndex .name
+    {
+        margin-top: 0.15rem;
+        text-align: center;
+        font-size: 0.55rem;
+        color: #c6c6c6
+    }
+
+    #homeIndex .active .name
+    {
+        color: #36aeff;
+    }
+
+	</style>
+	<div class="bin-page-navi-bar" naviTitle="text:WELCOME" naviLeft="text:Github" naviRight="text:文档"></div>
+	<div class="bin-page-content">
+        <div class="home-content">
+            <view path="view!work/index" name="work"></view>
+            <view path="view!mine/index" name="mine" hide="true"></view>
+        </div>
+        <view path="bin/common/tabBarView" opts.items="code:['work', 'mine']" opts.active-style="active" opts.on-change="view.onTabChange.bind(view)">
+            <footer class="home-footer">
+                <div class="tab" id="work">
+                    <div class="icon work"></div>
+                    <div class="name">工作</div>
+                </div>
+                <div class="tab" id="mine">
+                    <div class="icon mine"></div>
+                    <div class="name">我的</div>
+                </div>
+            </footer>
+        </view>
+	</div>
+</div>

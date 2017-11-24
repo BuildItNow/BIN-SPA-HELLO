@@ -1,0 +1,33 @@
+{
+  "name": "BIN-SPA-HELLO",
+  "description": "BIN single page application template",
+  "version": "1.0.0",
+  "author": {
+    "name": "Yang G",
+    "email": "pinner@mail.ustc.edu.cn"
+  },
+  "homepage": "https://github.com/BuildItNow/BIN",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BuildItNow/BIN.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "colors": "^1.1.2",
+    "commander": "^2.9.0",
+    "fs-extra": "^2.1.2",
+    "glob": "*",
+    "gulp": "^3.9.0",
+    "gulp-clean-css": "*",
+    "gulp-filter": "*",
+    "gulp-htmlmin": "*",
+    "gulp-notify": "^2.2.0",
+    "gulp-uglify": "*",
+    "md5": "*",
+    "through2": "~0.6.1"
+  },
+  "scripts": {
+    "start": "node ./server/dev.js",
+    "build": "gulp build"
+  }
+}

@@ -1,0 +1,22 @@
+<div id="list" class="bin-page" vm>
+	<style>
+		#list section
+		{
+			padding: 0 2em;
+			
+			height: 2.2rem;
+			background-color: #f9f9f9;
+
+			font-size: 0.6rem;
+			color: #36aeff;
+			line-height: 2.2rem;
+			text-align: left;
+
+			border-bottom: 1px solid #e6e6e6;
+		}
+	</style>
+	<div class="bin-page-navi-bar" naviTitle="text:List TODO"></div>
+	<div class="bin-page-content">
+	</div>
+	<view path="bin/common/listView" opts.el="view.$content()" opts.auto-refresh="animation" opts.auto-load-more="true" opts.data-provider="view.dataProvider" opts.item-provider="view.itemProvider"></view>
+</div>

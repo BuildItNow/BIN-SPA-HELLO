@@ -1,0 +1,24 @@
+<div id="scroll" class="bin-page" vm>
+	<style>
+		#scroll section
+		{
+			height: 15rem;
+			background-color: #f9f9f9;
+
+			font-size: 0.8rem;
+			color: #36aeff;
+			line-height: 15rem;
+			text-align: center;
+
+			border-bottom: 1px solid #e6e6e6;
+		}
+	</style>
+	<div class="bin-page-navi-bar" naviTitle="text:Scroll TODO"></div>
+	<div class="bin-page-content">
+		<section>Section 0</section>
+		<section>Section 1</section>
+		<section>Section 2</section>
+		<section>Section 3</section>
+	</div>
+	<view path="bin/common/scrollView" opts.el="view.$content()"></view>
+</div>

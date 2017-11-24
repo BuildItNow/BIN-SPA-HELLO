@@ -1,0 +1,182 @@
+<div id="workIndex">
+	<style>
+    #workIndex
+    {
+        background-color: white;
+    }
+
+    #workIndex .swiper-container
+    {
+        height: 10rem;
+    }
+
+    #workIndex .swiper-slide
+    {
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    #workIndex .operation
+    {
+        display: inline-block;
+        width: 50%;
+        height: 3.6rem;
+    }
+
+    #workIndex .icon
+    {
+        width: 1.8rem;
+        height: 1.8rem;
+
+        margin-top: 0.5rem;
+    }
+
+    #workIndex .detail
+    {
+        background-image: url(work/img/detail.png);
+    }
+
+    #workIndex .map
+    {
+        background-image: url(work/img/map.png);
+    }
+
+    #workIndex .name
+    {
+        font-size: 0.6rem;
+        color: #3d4145;
+    }
+
+    #workIndex .hots-header
+    {
+        font-size: 0.7rem;
+        height: 2rem;
+        line-height: 2rem;
+        background-color: #f9f9f9;
+        padding: 0 0.5em;
+
+        position: relative;
+    }
+
+    #workIndex .hots-header .refresh
+    {
+        position: absolute;
+        top: 0.4rem;
+        right: 0.5rem;
+        font-size: 0.6rem;
+        height: 1.2rem;
+        line-height: 1.2rem;
+
+        padding: 0 0.5em;
+        border: 1px solid #1c99ed;
+        border-radius: 5px;
+        color: #1c99ed;
+    }
+
+    #workIndex .hots-list
+    {
+        padding: 0 0.5em 10px;
+        margin: 0;
+    }
+
+    #workIndex .hots-item
+    {
+        min-height: 2.75rem;
+        border-bottom: 1px solid #eee;
+        padding: 0.5em 0;
+
+        display: flex;
+        display: -webkit-flex;
+    }
+
+    #workIndex .hot-icon
+    {
+        width: 4rem;
+        height: 2.75rem;
+
+        margin: 0;
+
+        flex-shrink: 0;
+    }
+
+    #workIndex .hot-content
+    {
+        margin-left: 0.5rem;
+    }
+
+    #workIndex .hot-content .name
+    {
+        text-align: left;
+        font-size: 0.8rem;
+        line-height: 1;
+        margin: 0;
+        color: #4caf50;
+    }
+
+    #workIndex .hot-content .addr
+    {
+        margin-left: 0.5rem;
+        font-size: 0.6rem;
+        color: #c6c6c6;
+        vertical-align: bottom;
+    }
+
+    #workIndex .hot-content .locate
+    {
+        width: 0.4rem;
+        height: 0.6rem;
+        vertical-align: bottom;
+        margin-left: 0.25em;
+        opacity: 0.5;
+    }
+
+    #workIndex .hot-content .desc
+    {
+        margin-top: 0.25em;
+        line-height: 1.25;
+        font-size: 0.6rem;
+        word-break: break-all;
+    }
+
+	</style>
+	<section class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" v-for="image in images" :style="{backgroundImage:image}">
+            </div>
+        </div>
+    </section>
+    <view path="bin/common/swipeView" opts.el="view.$('.swiper-container')" opts.swiper-options="code:{loop:true,autoplay:2000,autoplayDisableOnInteraction:false}"></view>
+    <section style="font-size:0">
+        <div class="operation" v-navigation:push="work/detail">
+            <div class="icon detail"></div>
+            <div class="name">
+                介绍
+            </div>
+        </div>
+        <div class="operation" v-navigation:push="work/locate">
+            <div class="icon map"></div>
+            <div class="name">
+                坐标
+            </div>
+        </div>
+    </section>
+    <section>
+        <header class="hots-header">
+            <span>热门景点</span>
+            <span class="refresh" @click="refreshHots">刷新</span>
+        </header>
+        <ul class="hots-list">
+            <li class="hots-item" v-for="item in hots" @click="gotoHotLocate(item)">
+                <div class="icon hot-icon" :style="{backgroundImage:item.icon}"></div>
+                <div class="hot-content">
+                    <div class="name">
+                        {{item.name}}<span class="addr">{{item.addr}}</span><img class="locate" src="work/img/locate.png"></img>
+                    </div>
+                    <div class="desc">
+                        {{item.desc}}
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+</div>

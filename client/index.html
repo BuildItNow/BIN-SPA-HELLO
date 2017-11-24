@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SPA-HELLO</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta http-equiv="Access-Control-Allow-Origin" content="*"/>
+        <meta name="format-detection" content="telephone=no"/>
+        <meta http-equiv="pragma" content="no-cache"/>
+        <script>
+            document.documentElement.style.fontSize = document.documentElement.clientWidth/640*40+"px";
+        </script>
+        <link href="./bin/3rdParty/appboot/css/appboot.css?v=$(bpv_version)" rel="stylesheet"/>
+        <link href="./bin/res/css/bpf_hash_bin.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div id="window">
+            <div id="navigationContainer" class="bin-navigation-container">
+            </div>
+            <div id="HUDContainer" class="bin-HUD-container">
+            </div>
+            <div id="appBootBg" time="delay200">
+                <div class="loading-spinner" style="margin-top:2.2rem;">
+                    <div class="spinner-icon"></div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="./bin/3rdParty/requirejs/bpf_hash_require.js" data-main="./bin/bpf_hash_requireMain.js"></script>
+    </body>
+</html>
