@@ -10,10 +10,11 @@
         <meta name="format-detection" content="telephone=no"/>
         <meta http-equiv="pragma" content="no-cache"/>
         <script>
-            document.documentElement.style.fontSize = document.documentElement.clientWidth/640*40+"px";
+            document.documentElement.style.fontSize = Math.min(420, document.documentElement.clientWidth)/640*40+"px";
         </script>
         <link href="./bin/3rdParty/appboot/css/appboot.css?v=$(bpv_version)" rel="stylesheet"/>
         <link href="./bin/res/css/bpf_hash_bin.css" rel="stylesheet"/>
+        <link href="./application/css/application.css?v=$(bpv_version)" rel="stylesheet"/>
     </head>
     <body>
         <div id="window">

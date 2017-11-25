@@ -1,3 +1,18 @@
+body
+{
+    background-color: #f0f0f0;
+}
+
+#window
+{
+    max-width: 420px;
+    left: 0 !important; 
+    right: 0 !important;
+    top: 0 !important; 
+    bottom: 0 !important; 
+    margin: auto !important;  
+}
+
 .bin-page
 {
     font-weight: lighter;
