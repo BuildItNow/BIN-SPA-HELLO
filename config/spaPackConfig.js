@@ -28,6 +28,8 @@ var config =
 			    //"bin/core/netPolicy/netDebugPolicy",
 			    "bin/core/netPolicy/netSendCheckPolicy",
 			    "bin/core/util",
+			    "bin/core/route",
+			    "bin/core/router",
 
 			    // common
 			    "bin/common/hudView",
@@ -70,7 +72,10 @@ var config =
 			],
 			exclude:
 			[
-				"#3party", 
+				"#3party-0", 
+				"#3party-1", 
+				"#3party-2", 
+				"#3party-3"
 				//"bin/core/debugManager",
 				//"bin/core/netPolicy/netDebugPolicy", 
 				//"bin/debug/debugView",
@@ -78,26 +83,50 @@ var config =
 			],
 			//out:"",
 		},
-		"3party":
+		"3party-0":
 		{
 			include:
 			[
-				"vue", 
+				"jquery"
+			],
+			exclude:[],
+			//out:"",
+		},
+		"3party-1":
+		{
+			include:
+			[
 				"i18n", 
 				"css",
-				"swiper",  
 				"domReady", 
-				"text", 
-				"iscroll", 
+				"text",
 				"fastclick", 
 				"prloader", 
 				"lsloader", 
-				"lzstring", 
-				"jquery", 
-				"underscore", 
+				"lzstring",
 				"backbone"
 			],
-			exclude:[],
+			exclude:["#3party-0"],
+			//out:"",
+		},
+		"3party-2":
+		{
+			include:
+			[
+				"iscroll", 
+				"swiper"
+			],
+			exclude:["#3party-0", "#3party-1"],
+			//out:"",
+		},
+		"3party-3":
+		{
+			include:
+			[
+				"underscore", 
+				"vue"
+			],
+			exclude:["#3party-0", "#3party-1", "#3party-2"]
 			//out:"",
 		}
 	}

@@ -8,7 +8,10 @@ function(Base, DataCenter)
 	{
 		Base.prototype.run.call(this);
 		
-		bin.naviController.startWith("home/index");
+		bin.naviController.startWith("home/index", null, {onPushed:function()
+		{
+			bin.app.appBootBg.dismiss();
+		}});
 	}
 
 	Application.onResize = function()
@@ -21,14 +24,7 @@ function(Base, DataCenter)
 			return ;
 		}
 		this._width = 420;
-
-		var elemRoot = document.documentElement;
-		if(!this._fontSize)
-		{
-			var f = parseInt(elemRoot.style.fontSize);
-			this._fontSize = parseInt(420*f/w)+"px";
-		}
-		elemRoot.style.fontSize = this._fontSize;
+		document.documentElement.style.fontSize = "26px";
 	}
 
 	return Base.extend(Application);

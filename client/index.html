@@ -10,24 +10,120 @@
         <meta name="format-detection" content="telephone=no"/>
         <meta http-equiv="pragma" content="no-cache"/>
         <script>
-            document.documentElement.style.fontSize = Math.min(420, document.documentElement.clientWidth)/640*40+"px";
+            var w = document.documentElement.clientWidth;
+            if(w <= 420)
+            {
+                document.documentElement.style.fontSize = w*40/640+"px";
+            }
+            else
+            {
+                document.documentElement.style.fontSize = "26px";
+            }
         </script>
         <link href="./bin/3rdParty/appboot/css/appboot.css?v=$(bpv_version)" rel="stylesheet"/>
         <link href="./bin/res/css/bpf_hash_bin.css" rel="stylesheet"/>
         <link href="./application/css/application.css?v=$(bpv_version)" rel="stylesheet"/>
     </head>
     <body>
+        <style>
+        #window
+        {
+            position: absolute;
+            max-width: 420px;
+            left: 0 !important; 
+            right: 0 !important;
+            top: 0 !important; 
+            bottom: 0 !important; 
+            margin: auto !important;  
+        }
+        </style>
         <div id="window">
             <div id="navigationContainer" class="bin-navigation-container">
             </div>
             <div id="HUDContainer" class="bin-HUD-container">
             </div>
-            <div id="appBootBg" time="delay200">
-                <div class="loading-spinner" style="margin-top:2.2rem;">
-                    <div class="spinner-icon"></div>
+            <div id="appBootBg" time="custom" effect="fade">
+                <div class="bin-page">
+                    <style>
+                    #appBootBg .home-content
+                    {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 2.5rem;
+                    }
+
+                    #appBootBg .home-footer
+                    {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        height: 2.5rem;
+                        font-size: 0;
+                        border-top: 1px solid #e6e6e6;
+                        background-color: #f9f9f9
+                    }
+
+                    #appBootBg .tab
+                    {
+                        display: inline-block;
+                        width: 50%;
+                        height: 100%;
+                        text-align: center;
+                    }
+
+                    #appBootBg .icon
+                    {
+                        margin: 0.3rem auto 0;
+                        width: 1.1rem;
+                        height: 1.1rem;
+                    }
+
+                    #appBootBg .work
+                    {
+                        background-image: url(home/img/work.png);
+                    }
+
+                    #appBootBg .mine
+                    {
+                        background-image: url(home/img/me.png);
+                    }
+
+                    #appBootBg .name
+                    {
+                        margin-top: 0.15rem;
+                        text-align: center;
+                        font-size: 0.55rem;
+                        color: #c6c6c6
+                    }
+
+                    </style>
+                    <div class="bin-page-navi-bar">
+                        <h1 class="bin-page-navi-title">WELCOME</h1>
+                    </div>
+                    <div class="bin-page-content">
+                        <div class="loading-spinner" style="margin-top:5px;">
+                            <div class="spinner-icon"></div>
+                        </div>
+                        <footer class="home-footer">
+                            <div class="tab" id="work">
+                                <div class="icon work"></div>
+                                <div class="name">工作</div>
+                            </div>
+                            <div class="tab" id="mine">
+                                <div class="icon mine"></div>
+                                <div class="name">我的</div>
+                            </div>
+                        </footer>
+                    </div>
                 </div>
             </div>
         </div>
-        <script type="text/javascript" src="./bin/3rdParty/requirejs/bpf_hash_require.js" data-main="./bin/bpf_hash_requireMain.js"></script>
+        <!-- Put cordova before requirejs -->
+        <script type="text/javascript" src="./bin/3rdParty/requirejs/bpf_hash_require.js"></script>
+        <script type="text/javascript" src="./config/bpf_hash_globalConfig.js"></script>
+        <script type="text/javascript" src="./bin/bpf_hash_requireMain.js"></script>
     </body>
 </html>
